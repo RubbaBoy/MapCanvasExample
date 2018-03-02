@@ -1,0 +1,9 @@
+main: com.uddernetworks.mapcanvas.example.Example
+name: MapCanvasExample
+version: 1.0
+author: RubbaBoy
+depend: [MapCanvasAPI]
+commands:
+  canvas:
+    usage: /canvas
+    description: Canvas command

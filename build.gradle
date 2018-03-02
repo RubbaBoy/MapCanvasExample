@@ -1,0 +1,27 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '2.0.2'
+    id 'java'
+}
+
+group 'com.uddernetworks.mapcanvas.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven {
+        url 'http://nexus.rubbaboy.me:85/repository/maven-public/'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compileOnly 'org.spigotmc:spigot-api:1.12.1-R0.1-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot:1.12.1-R0.1-SNAPSHOT'
+
+    compileOnly 'com.uddernetworks.mapcanvas:MapCanvas:1.0-SNAPSHOT'
+}
