@@ -100,13 +100,15 @@ public class Example extends JavaPlugin implements Listener {
 
                 mapCanvas.addObject(rectangle);
 
-                mapCanvas.addObject(new Circle(0, 0, 10, 15, MapPalette.matchColor(Color.RED))); // Top left
-                mapCanvas.addObject(new Circle(width * 128, 0, 10, 15, MapPalette.matchColor(Color.GREEN))); // Top right
-                mapCanvas.addObject(new Circle(0, height * 128, 10, 15, MapPalette.matchColor(Color.BLUE))); // Bottom left
-                mapCanvas.addObject(new Circle(width * 128, height * 128, 10, 15, MapPalette.matchColor(Color.YELLOW))); // Bottom right
+                mapCanvas.addObject(new Circle(0, 0, 100, 150, MapPalette.matchColor(Color.RED))); // Top left
+                mapCanvas.addObject(new Circle(width * 128, 0, 100, 150, MapPalette.matchColor(Color.GREEN))); // Top right
+                mapCanvas.addObject(new Circle(0, height * 128, 100, 150, MapPalette.matchColor(Color.BLUE))); // Bottom left
+                mapCanvas.addObject(new Circle(width * 128, height * 128, 100, 150, MapPalette.matchColor(Color.YELLOW))); // Bottom right
 
-                int imageWidth = 640;
-                int imageHeight = 480;
+                mapCanvas.addObject(new Line((width * 128) - 256, 128, (width * 128) - 512, (height * 128) - 256, MapPalette.matchColor(Color.ORANGE)));
+
+                int imageWidth = 640 * 4;
+                int imageHeight = 480 * 4;
 
                 com.uddernetworks.mapcanvas.api.objects.Image image = new Image("https://rubbaboy.me/images/zvke6pw.png", (width * 128 - imageWidth) / 2, (height * 128 - imageHeight) / 2, imageWidth, imageHeight);
                 image.setClick((clickingPlayer, action, mapCanvasSection, x, y) -> clickingPlayer.sendMessage(ChatColor.BLUE + "Clicked image, action = " + action + " specifically at (" + x + ", " + y + ")"));
